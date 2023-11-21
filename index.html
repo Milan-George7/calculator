@@ -9,34 +9,39 @@
 </head>
 <body>
     <div class="container">
-        <input type="text" class="display">
+        <!-- calc screen -->
+        <input id="result" type="text" class="display" readonly>
 
+
+        <!-- calc button -->
         <div class="buttons">
-            <button>(</button>
-            <button>)</button>
-            <button><i class="fa-solid fa-delete-left"></i></button>
-            <button><i class="fa-solid fa-divide"></i></button>
+            
 
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button><i class="fa-solid fa-xmark"></i></button>
+            <button onclick="displayData('7')">7</button>
+            <button onclick="displayData('8')">8</button>
+            <button onclick="displayData('9')">9</button>
+            <button onclick="displayData('*')"><i class="fa-solid fa-xmark"></i></button>
 
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button><i class="fa-solid fa-minus"></i></button>
+            <button onclick="displayData('4')">4</button>
+            <button onclick="displayData('5')">5</button>
+            <button onclick="displayData('6')">6</button>
+            <button onclick="displayData('-')"><i class="fa-solid fa-minus"></i></button>
 
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button><i class="fa-solid fa-plus"></i></button>
-
-            <button>0</button>
-            <button>.</button>
-            <button><b>exp</b></button>
-            <button><i class="fa-solid fa-equals"></i></button>
+            <button onclick="displayData('1')">1</button>
+            <button onclick="displayData('2')">2</button>
+            <button onclick="displayData('3')">3</button>
+            <button onclick="displayData('+')"><i class="fa-solid fa-plus"></i></button>
+            
+            
+            <button onclick="calc_AC()"><b>AC</b></button>
+            <button onclick="displayData('0')">0</button>
+            <button onclick="displayData('/')"><i class="fa-solid fa-divide"></i></button>
+            <button onclick="calc_Result()"><i class="fa-solid fa-equals"></i></button>
+            <button onclick="removeLast()"><i class="fa-solid fa-delete-left"></i></button>
         </div>
     </div>
+
+
 </body>
+<script src="./main.js"></script>
 </html>
